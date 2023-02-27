@@ -1,4 +1,6 @@
-Chart.defaults.font.family = 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+// Define a FontFace
+const font = new FontFace("Segoe UI", "url(../js/SEGOEUI.TTF)");
+
 Chart.defaults.font.size = 10;
 Chart.defaults.font.style = 'normal';
 Chart.defaults.font.weight = 'bold';

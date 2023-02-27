@@ -1,9 +1,14 @@
 /**********/
 /* GERIAS */
 /**********/
+@font-face
+{
+    font-family: "Segoe UI";
+    src: url('SEGOEUI.TTF') format('truetype');
+}
+
 body {
     background-color: #e8e8e8;
-    font-family: 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
     font-size: 12px;    
 }
 

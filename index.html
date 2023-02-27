@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Citel Software</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Pasta CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- GRID -->
+    <div class="container-fluid">
+
+        <!-- LINHA 1 -->
+        <div class="row-col-4">
+            <div class="card">
+                <canvas id="projecaoVendas" height="215"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="projecaoMargem" height="215"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="totalVendas" height="215"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="pedidosNaoFaturados" height="215"></canvas>
+            </div>
+        </div>
+
+        <!-- LINHA 2 -->
+        <div class="row-col-1">
+            <div class="table-responsive">
+                <table class="table-borderless caption-top">
+                    <caption>Resumo Sintético</caption>
+                    <thead>
+                        <tr>
+                            <th class="text-start">Vendedor</th>                            
+                            <th>Vendas</th>
+                            <th>Meta</th>
+                            <th>Projetado</th>
+                            <th>% Meta</th>
+                            <th>% Realizado</th>
+                            <th>Clientes Atendidos</th>
+                            <th>Nº Vendas</th>
+                            <th>Ticket Médio</th>
+                            <th>Orçamentos Abertos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="container-table-value text-start">Nome do Vendedor</div></td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                        </tr>                      
+                        <tr>
+                            <td><div class="container-table-value text-start">Nome do Vendedor</div></td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                        </tr> 
+                        <tr>
+                            <td><div class="container-table-value text-start">Nome do Vendedor</div></td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                        </tr> 
+                        <tr>
+                            <td><div class="container-table-value text-start">Nome do Vendedor</div></td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                        </tr> 
+                        <tr>
+                            <td><div class="container-table-value text-start">Nome do Vendedor</div></td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                            <td><div class="container-table-value">0,00</td>
+                        </tr>                                                 
+                    </tbody>                    
+                </table>            
+            </div>
+        </div>
+
+        <!-- LINHA 3 -->
+        <div class="row-col-1">
+            <div class="card">
+                <canvas id="vendasXMetas" height="215"></canvas>
+            </div> 
+        </div>
+
+        <!-- LINHA 4 -->
+        <div class="row-col-2">
+            <div class="card">
+                <canvas id="formasPagamento" height="215"></canvas>
+            </div> 
+            <div class="table-responsive">
+                <table class="table-borderless caption-top">
+                    <caption class="text-center">
+                        Top 5 Clientes
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th class="text-start">Cliente</th>                            
+                            <th>Venda</th>
+                            <th>Margem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="container-table-value text-start">Matheus Mendes Custódio</div></td>
+                            <td><div class="container-table-value">R$ 1.000.000,00</div></td>
+                            <td><div class="container-table-value">9.999%</div></td>
+                        </tr>                         
+                        <tr>
+                            <td><div class="container-table-value text-start">Matheus Mendes Custódio</div></td>
+                            <td><div class="container-table-value">R$ 1.000.000,00</div></td>
+                            <td><div class="container-table-value">9.999%</div></td>
+                        </tr>                         
+                        <tr>
+                            <td><div class="container-table-value text-start">Matheus Mendes Custódio</div></td>
+                            <td><div class="container-table-value">R$ 1.000.000,00</div></td>
+                            <td><div class="container-table-value">9.999%</div></td>
+                        </tr>                                                                         
+                        <tr>
+                            <td><div class="container-table-value text-start">Matheus Mendes Custódio</div></td>
+                            <td><div class="container-table-value">R$ 1.000.000,00</div></td>
+                            <td><div class="container-table-value">9.999%</div></td>
+                        </tr>                         
+                        <tr>
+                            <td><div class="container-table-value text-start">Matheus Mendes Custódio</div></td>
+                            <td><div class="container-table-value">R$ 1.000.000,00</div></td>
+                            <td><div class="container-table-value">9.999%</div></td>
+                        </tr>                                                                         
+                    </tbody>                    
+                </table>  
+            </div>
+        </div>        
+    </div>
+   
+    <!-- Chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="js/charts.js"></script>     
+</body>
+</html>

@@ -1,0 +1,142 @@
+/**********/
+/* GERIAS */
+/**********/
+body {
+    background-color: #e8e8e8;
+    font-family: 'Helvetica Neue';
+    font-size: 12px;    
+}
+
+.container-fluid 
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/***********/
+/* TABELAS */
+/***********/
+table
+{
+    width: 100%;
+}
+
+caption 
+{
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: 0px;
+    font-weight: bold;
+    font-size: 14px;
+    height: 30px;
+    padding: 3px;
+    opacity: 0.7;    
+    text-align: center;
+}
+
+th 
+{
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    border-bottom: 0px;
+    text-align: end;
+    font-weight: bold;
+    font-size: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 20px;
+    opacity: 0.5;
+}
+
+td 
+{
+    border-radius: 6px;
+    border-left: 1px dashed rgba(0, 0, 0, 0.3);
+    border-right: 1px dashed rgba(0, 0, 0, 0.3);
+    text-align: end;
+    height: 30px;
+    padding: 2px;
+}
+
+.container-table-value 
+{
+    background-color: white; 
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    vertical-align: middle;  
+    height: 100%;  
+}
+
+tbody 
+{
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+}
+
+/************/
+/* GRÁFICOS */
+/************/
+.row-col-1,
+.row-col-2,
+.row-col-4 
+{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.row-col-1 .card,
+.row-col-2 .card,
+.row-col-4 .card 
+{
+    position: relative;
+    background-color: white; 
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border: 0px;
+    border-radius: 10px;
+}
+
+/******************/
+/* RESPONSIVIDADE */
+/******************/
+@media (min-width: 576px) 
+{
+    .row-col-2
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .row-col-4 
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width: 992px) 
+{
+    .row-col-2 
+    {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .row-col-4 
+    {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media (min-width: 1400px) 
+{
+    th 
+    {
+        font-size: 12px;
+    }
+}

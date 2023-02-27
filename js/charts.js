@@ -418,7 +418,7 @@ new Chart(ctx6,
                     align: 'center',
                     padding: 15,
                     display: true,
-                    text: 'Vendas x Metas (Diárias)',
+                    text: 'Formas de Pagamento',
                     font: {
                         size: 14,
                     }

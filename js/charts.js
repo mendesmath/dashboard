@@ -1,4 +1,4 @@
-Chart.defaults.font.family = 'Helvetica Neue';
+Chart.defaults.font.family = 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
 Chart.defaults.font.size = 10;
 Chart.defaults.font.style = 'normal';
 Chart.defaults.font.weight = 'bold';

@@ -1,5 +1,5 @@
 /**********/
-/* GERIAS */
+/* GERAIS */
 /**********/
 @font-face
 {
@@ -129,7 +129,7 @@ tbody
 {
     .row-col-2 
     {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 3fr;
     }
 
     .row-col-4 

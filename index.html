@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <button onclick="criaDash()"> Carregar Gráficos </button>
+
     <!-- GRID -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="principal">
 
         <!-- LINHA 1 -->
-        <div class="row-col-4">
+<!--        <div class="row-col-4">
             <div class="card">
                 <canvas id="projecaoVendas" height="215"></canvas>
             </div>
@@ -28,10 +30,10 @@
             <div class="card">
                 <canvas id="pedidosNaoFaturados" height="215"></canvas>
             </div>
-        </div>
+        </div> -->
 
         <!-- LINHA 2 -->
-        <div class="row-col-1">
+<!--        <div class="row-col-1">
             <div class="table-responsive">
                 <table class="table-borderless caption-top">
                     <caption>Resumo Sintético</caption>
@@ -113,17 +115,17 @@
                     </tbody>                    
                 </table>            
             </div>
-        </div>
+        </div> -->
 
         <!-- LINHA 3 -->
-        <div class="row-col-1">
+<!--        <div class="row-col-1">
             <div class="card">
                 <canvas id="vendasXMetas" height="215"></canvas>
             </div> 
-        </div>
+        </div> -->
 
         <!-- LINHA 4 -->
-        <div class="row-col-2">
+<!--        <div class="row-col-2">
             <div class="card">
                 <canvas id="formasPagamento" height="215"></canvas>
             </div> 
@@ -168,11 +170,11 @@
                     </tbody>                    
                 </table>  
             </div>
-        </div>        
+        </div>        -->
     </div>
    
     <!-- Chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
-    <script src="js/charts.js"></script>     
+    <script src="js/charts_json.js"></script>      
 </body>
 </html>

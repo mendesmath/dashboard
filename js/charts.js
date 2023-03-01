@@ -1,10 +1,3 @@
-// Define a FontFace
-const font = new FontFace("Segoe UI", "url(../js/SEGOEUI.TTF)");
-
-Chart.defaults.font.size = 10;
-Chart.defaults.font.style = 'normal';
-Chart.defaults.font.weight = 'bold';
-
 /*******************************/
 /* GRÁFICO: PROJEÇÃO DE VENDAS */
 /*******************************/
@@ -17,7 +10,6 @@ new Chart(ctx,
         {
             labels: ['Vendas', 'Meta', 'Projecao'],
             datasets: [{
-                label: 'Projecao de Vendas',
                 data: [350000, 800000, 1000000],
                 barPercentage: 0.6,
                 backgroundColor: [
@@ -120,7 +112,6 @@ new Chart(ctx4,
         {
             labels: ['Vendas', 'Meta', 'Projecao'],
             datasets: [{
-                label: 'Projecao de Vendas',
                 data: [20, 20, 20, 20, 20],
                 backgroundColor: [
                     'rgba(213, 30, 34, 1)', 
@@ -178,7 +169,6 @@ new Chart(ctx2,
         {
             labels: ['Nov/22', 'Dez/22', 'Jan/23', 'Fev/23'],
             datasets: [{
-                label: 'Projecao de Vendas',
                 data: [257400, 303000, 419000, 85000],
                 barPercentage: 0.6,
                 backgroundColor: [
@@ -243,7 +233,6 @@ new Chart(ctx3,
         {
             labels: ['Mês Ant.', 'Dez/22', 'Jan/23', 'Fev/23'],
             datasets: [{
-                label: 'Projecao de Vendas',
                 data: [16000, 10000, 12500, 8500],
                 barPercentage: 0.6,
                 backgroundColor: [

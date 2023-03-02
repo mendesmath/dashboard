@@ -1,0 +1,130 @@
+[
+    {
+        "row": 1,
+        "elements": 
+        [
+            {
+                "id" : "projecaoVendas",
+                "title": "Projecao de Vendas",
+                "type": "bar",
+                "labels": ["Vendas", "Meta", "Projecao"],        
+                "datasets": 
+                [{
+                    "label": "",
+                    "data": [300000, 600000, 900000]
+                }]
+            },
+            {
+                "id" : "projecaoMargem",
+                "title": "Projecao de Margem",
+                "type": "velocimetro",
+                "labels": ["Meta do Mês", "Margem Atual", "Variação"],        
+                "datasets": 
+                [{
+                    "label": "",
+                    "data": [12, 35, 80]
+                }]        
+            },
+            {
+                "id" : "totalVendas",
+                "title": "Total de Vendas",
+                "type": "bar",
+                "labels": ["Nov/22", "Dez/22", "Jan/23","Fev/23"],
+                "datasets": 
+                [{
+                    "label": "",
+                    "data": [200000, 300000, 400000, 500000]
+                }]                
+            },
+            {
+                "id" : "pedidosNaoFaturados",
+                "title": "Pedidos de Venda Não Faturados",
+                "type": "bar",
+                "labels": ["Mês Ant.", "Dez/22", "Jan/23", "Fev/23"],
+                "datasets": 
+                [{
+                    "label": "",
+                    "data": [25000, 50000, 75000, 100000]
+                }]                        
+            }
+        ]
+    },
+    {
+        "row": 2,
+        "elements": 
+        [    
+            {
+                "id" : "resumoVendedor",
+                "title": "Resumo Sintético de Vendedor",
+                "type": "table",
+                "labels": ["Vendedor", "Vendas", "Meta", "Projetado", "% Meta", "% Realizado", "Clientes Atendidos", "Nº Vendas", "Ticket Médio", "Orçamentos Abertos"],
+                "datasets": 
+                {
+                    "label": "",
+                    "data": 
+                    [
+                        ["Matheus Mendes Custódio", 100000, 90000, 2000000, 110, 10, 50, 20, 5000, 1.00]                          
+                    ]
+                }                       
+            }
+        ]     
+    },
+    {
+        "row": 3,
+        "elements": 
+        [    
+            {
+                "id" : "vendasXMetas",
+                "title": "Vendas x Metas (Diárias)",
+                "type": "line",
+                "labels": ["01/02","02/02","03/02","04/02","05/02","06/02","07/02","08/02","09/02","10/02","11/02","12/02","13/02","14/02","15/02","16/02","17/02","18/02","19/02","20/02","21/02","22/02","23/02","24/02","25/02","26/02","27/02","28/02"],
+                "datasets":
+                [
+                    {
+                        "label": "Vendas",
+                        "data": [10000,45000,60000,29000,10000,23000,10000,34000,56000,22000,55000,10000,45000,60000,29000,10000,23000,10000,34000,56000,22000,55000,1000,8000,4000,10000,29000,99000]
+                    },
+                    {
+                        "label": "Meta",
+                        "data": [50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000]
+                    }          
+                ]                    
+            }
+        ]     
+    },
+    {
+        "row": 4,
+        "elements": 
+        [    
+            {
+                "id" : "formasPagamento",
+                "title": "Formas de Pagamento",
+                "type": "pie",
+                "labels": ["Dinheiro", "Cartão de Crédito", "Cheque", "Vale", "Faturado"],
+                "datasets": 
+                [{
+                    "label": "",
+                    "data": [1000,2000,3000,4000,5000]
+                }]        
+            },
+            {
+                "id" : "topClientes",
+                "title": "Top 5 Clientes",
+                "type": "table",
+                "labels": ["Cliente","Venda","Margem"],
+                "datasets": 
+                {
+                    "label": "",
+                    "data": 
+                    [
+                        ["Bernard Arnault", 1000000, 1000],
+                        ["Elon Musk", 750000, 750],
+                        ["Jeff Bezos", 500000, 500],
+                        ["Larry Ellison", 250000, 250],
+                        ["Warren Buffett", 90000, 90]
+                    ]
+                }                      
+            }  
+        ]     
+    }
+]

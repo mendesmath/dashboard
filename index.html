@@ -12,7 +12,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <button onclick="criaDash()"> Carregar Gráficos </button>
+    <div class="container-fluid">
+        <button type="button" class="btn btn-light" onclick="criaDash('../json/vendedor.json')"> Vendedor </button>
+        <button type="button" class="btn btn-light" onclick="criaDash('../json/gerente.json')"> Gerente </button>
+        <button type="button" class="btn btn-light" onclick="criaDash('../json/lojas.json')"> Lojas </button>
+        <button type="button" class="btn btn-light" onclick="criaDash('../json/todaslojas.json')"> Todas as Lojas </button>
+    </div>
     
     <div class="container-fluid" id="principal"></div>
     

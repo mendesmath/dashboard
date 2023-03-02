@@ -1,0 +1,105 @@
+[
+    {
+        "row": 1,
+        "elements": 
+        [
+            {
+                "id" : "projecaoVendas",
+                "title": "Projecao de Vendas",
+                "type": "bar",
+                "labels": ["Vendas", "Meta", "Projecao"],        
+                "datasets": 
+                [{
+                    "label": "",
+                    "data": [500000, 500000, 500000]
+                }]
+            },
+            {
+                "id" : "projecaoMargem",
+                "title": "Projecao de Margem",
+                "type": "velocimetro",
+                "labels": ["Meta do Mês", "Margem Atual", "Variação"],        
+                "datasets": 
+                [{
+                    "label": "",
+                    "data": [12, 65, 80]
+                }]        
+            },
+            {
+                "id" : "totalVendas",
+                "title": "Total de Vendas",
+                "type": "bar",
+                "labels": ["Nov/22", "Dez/22", "Jan/23","Fev/23"],
+                "datasets": 
+                [{
+                    "label": "",
+                    "data": [500000, 500000, 500000, 500000]
+                }]                
+            },
+            {
+                "id" : "pedidosNaoFaturados",
+                "title": "Pedidos de Venda Não Faturados",
+                "type": "bar",
+                "labels": ["Mês Ant.", "Dez/22", "Jan/23", "Fev/23"],
+                "datasets": 
+                [{
+                    "label": "",
+                    "data": [500000, 500000, 500000, 500000]
+                }]                        
+            }
+        ]
+    },
+    {
+        "row": 2,
+        "elements": 
+        [    
+            {
+                "id" : "vendasXMetas",
+                "title": "Vendas x Metas (Diárias)",
+                "type": "line",
+                "labels": ["01/02","02/02","03/02","04/02","05/02","06/02","07/02","08/02","09/02","10/02","11/02","12/02","13/02","14/02","15/02","16/02","17/02","18/02","19/02","20/02","21/02","22/02","23/02","24/02","25/02","26/02","27/02","28/02"],
+                "datasets":
+                [
+                    {
+                        "label": "Vendas",
+                        "data": [100000, 50000, 1000, 50000, 100000, 50000, 1000, 50000, 100000, 50000, 1000, 50000, 100000, 50000, 1000, 50000, 100000, 50000, 1000, 50000, 100000, 50000, 1000, 50000, 100000, 50000, 1000, 50000]
+                    },
+                    {
+                        "label": "Meta",
+                        "data": [50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000]
+                    }          
+                ]                    
+            }
+        ]     
+    },
+    {
+        "row": 3,
+        "elements":
+        [
+            {
+                "id" : "construcaoMeta",
+                "title": "Construção da Meta",
+                "type": "table",
+                "labels": ["", "[Mês Corrente] - Quantidade","[Mês Corrente] - Valor","[Mês Corrente] - Ticket Médio",
+                               "[Média 3 Meses] - Quantidade","[Média 3 Meses] - Valor","[Média 3 Meses] - Ticket Médio"],
+                "datasets": 
+                {
+                    "label": "",
+                    "data": 
+                    [
+                        ["Construção da Meta 1", 100, 9999, 99.99, 100, 9999, 99.99],
+                        ["Construção da Meta 2", 200, 9999, 49.99, 200, 9999, 49.99],
+                        ["Construção da Meta 3", 300, 9999, 33.33, 300, 9999, 33.33],
+                        ["Construção da Meta 4", 400, 9999, 24.99, 400, 9999, 24.99],
+                        ["Construção da Meta 5", 500, 9999, 19.99, 500, 9999, 19.99],
+                        ["Construção da Meta 6", 600, 9999, 16.66, 600, 9999, 16.66],
+                        ["Construção da Meta 7", 700, 9999, 14.28, 700, 9999, 14.28],
+                        ["Construção da Meta 8", 800, 9999, 12.49, 800, 9999, 12.49],
+                        ["Construção da Meta 9", 900, 9999, 11.11, 900, 9999, 11.11],
+                        ["Construção da Meta 10", 1000, 9999, 9.99, 1000, 9999, 9.99]
+                    ]
+                } 
+            }
+        ]
+    }   
+]

@@ -7,7 +7,8 @@ Chart.defaults.font.size = 10;
 Chart.defaults.font.style = 'normal';
 Chart.defaults.font.weight = 'bold';
 
-const colorPalette = ['#485868', '#F3C766', '#F27360', '#9FC2BB', '#E8E8E8'];
+const colorPalette = ['#485868', '#F3C766', '#F27360', '#9FC2BB', '#E8E8E8', '#485868', '#F3C766', '#F27360', '#9FC2BB', '#E8E8E8',
+                      '#485868', '#F3C766', '#F27360', '#9FC2BB', '#E8E8E8', '#485868', '#F3C766', '#F27360', '#9FC2BB', '#E8E8E8'];
 const colorVelocimento = ['#d51e22', '#eb601a', '#ebad15', '#b9cd15', '#6bb534'];
 const pointStyles = ['rect','rectRot','circle','triangle','cross']
 const borderRadiusTypes = ['bar'];
@@ -21,12 +22,34 @@ function isNumber(str)
   return !isNaN(parseFloat(str))
 }
 
+function removeAll()
+{
+  const principal = document.querySelector("#principal");
+  const filhos = principal.children.length;
+
+  for (let i = 0; i < filhos; i++)
+  {
+    const row = document.querySelector("#linha"+i);
+    row.remove();
+  }
+}
+
+function formatFloat(valor)
+{
+  if (!isNumber(valor))
+    return valor;
+  else
+    return valor.toLocaleString('pt-br', {minimumFractionDigits: 2});
+}
+
 /*********************************/
 /* Carrega dados do arquivo JSON */
 /*********************************/
-async function fetchData() 
+async function fetchData(url) 
 {
-  const url = 'https://mendesmath.github.io/dashboard/json/dash_vendedor.json';
+  //const url = 'https://mendesmath.github.io/dashboard/json/vendedor.json';
+  //const url = '../json/vendedor.json';
+
   const response = await fetch(url);
   const datapoints = await response.json();
 
@@ -36,9 +59,11 @@ async function fetchData()
 /*********************************************/
 /* Criação da estrutura do HTML da dashboard */
 /*********************************************/
-async function criaDash() 
+async function criaDash(url) 
 {
-  const jsonFile = fetchData();
+  removeAll();
+
+  const jsonFile = fetchData(url);
   jsonFile.then(datapoints => 
     {
         for (let i = 0; i < datapoints.length; i++)
@@ -130,6 +155,13 @@ function novaTabela(rowId, elemento)
   table.appendChild(thead);
   table.appendChild(tbody);
 
+  if (elemento.hasOwnProperty("totalize"))
+  {
+    const tfoot = document.createElement("tfoot");
+    tfoot.id = 'tfoot_' + elemento.id;    
+    table.appendChild(tfoot);    
+  }  
+
   const div = document.createElement("div");
   div.classList.add('table-responsive');
   div.appendChild(table);
@@ -187,6 +219,23 @@ function insereTabela(elemento)
       trb.appendChild(td);
     } 
   } 
+
+  // Insere totalização, caso exista
+  if (elemento.hasOwnProperty("totalize"))
+  {
+    const tfoot = document.getElementById('tfoot_' + elemento.id);
+    const trf = document.createElement('tr');
+    tfoot.appendChild(trf);
+  
+    for (let i = 0; i < elemento.totalize.length; i++)
+    {
+      var thf = document.createElement('th');
+      var textof = document.createTextNode(formatFloat(elemento.totalize[i]));
+  
+      thf.appendChild(textof);
+      trf.appendChild(thf);
+    }    
+  }
 }
 
 /************************/
@@ -231,7 +280,7 @@ function insereVelocimetro(elemento)
             data: [20,20,20,20,20],
             backgroundColor: colorVelocimento,
             borderColor: colorVelocimento,     
-            needleValue: 90,
+            needleValue: elemento.datasets[0].data[1],
             borderRadius: 0,
             borderWidth: 1,
             circumference: 180, 

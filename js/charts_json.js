@@ -26,7 +26,7 @@ function isNumber(str)
 /*********************************/
 async function fetchData() 
 {
-  const url = '../json/dash_vendedor.json';
+  const url = 'https://mendesmath.github.io/dashboard/json/dash_vendedor.json';
   const response = await fetch(url);
   const datapoints = await response.json();
 

@@ -354,8 +354,8 @@ function getData(elemento)
   for (let i = 0; i < elemento.datasets.length; i++)
   {
     var cores = [];
-    if (elemento.type === "line")
-      cores = colors[i]
+    if ((elemento.type === "line") || ((elemento.type === "bar") && (elemento.datasets.length > 1)))
+      cores = colors[i];
     else 
       cores = colors;
 
@@ -363,7 +363,7 @@ function getData(elemento)
     ({
       label: elemento.datasets[i].label,
       data: elemento.datasets[i].data,
-      barPercentage: 0.6,
+      barPercentage: 0.8,
       borderRadius: getBorderRadius(elemento),
       borderWidth: 2,
       backgroundColor: cores,
@@ -399,7 +399,7 @@ function getBorderRadius(elemento)
 function getOptionPlugins(elemento)
 {
   var displayLegend = true;
-  if (elemento.type === 'bar')
+  if ((elemento.type === 'bar') && (elemento.datasets.length < 2))
     displayLegend = false;
   
   const objTitle = 
@@ -419,8 +419,9 @@ function getOptionPlugins(elemento)
       position: 'right', 
       align: 'center',
       labels: {
-        usePointStyle: true,
+        usePointStyle: usePointStyle(elemento),
         padding: 12,
+        boxWidth: 10,
       }   
     }
   }    
@@ -465,6 +466,11 @@ function getOptions(elemento)
   }  
 
   return options;
+}
+
+function usePointStyle(elemento)
+{
+  return elemento.type === 'line';
 }
 
 function getNeedle()
